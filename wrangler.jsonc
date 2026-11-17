@@ -1,6 +1,6 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
-  "name": "ofas-fund-app",
+  "name": "fund",
   "compatibility_date": "2026-11-01",
   "assets": {
     "directory": "./public",
