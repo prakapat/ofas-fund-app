@@ -63,7 +63,19 @@ git push -u origin main
 
 ---
 
-## ☁️ Deploy บน Railway
+## ☁️ Deploy บน Cloudflare (Workers Static Assets)
+
+```bash
+npm install
+npx wrangler login
+npm run deploy      # ได้ URL แบบ ofas-fund-app.<subdomain>.workers.dev
+```
+
+หรือเชื่อม GitHub repo ที่ Cloudflare Dashboard → **Workers & Pages → Create → Import a repository** (Deploy command: `npx wrangler deploy`) เพื่อ auto-deploy ทุกครั้งที่ push
+
+ไม่ต้องตั้ง environment variable — การตั้งค่าอยู่ใน `wrangler.jsonc`
+
+## ☁️ (เดิม) Deploy บน Railway
 
 1. เข้า [railway.app](https://railway.app) → **New Project** → **Deploy from GitHub repo** → เลือก repo นี้
 2. Railway จะตรวจเจอ `package.json` แล้ว build/start ให้อัตโนมัติด้วย `npm start`

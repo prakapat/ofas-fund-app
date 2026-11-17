@@ -1,0 +1,10 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "ofas-fund-app",
+  "compatibility_date": "2026-11-01",
+  "assets": {
+    "directory": "./public",
+    // เทียบเท่า fallback ไป index.html ใน server.js (SPA-style)
+    "not_found_handling": "single-page-application"
+  }
+}
